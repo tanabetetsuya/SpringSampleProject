@@ -4,18 +4,19 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import lombok.Data;
 
-@Data // 各フィールドのsetterとgetterを自動で設定
+@Data
 @Entity
-@Table(name = "booksinfo") // 対応するテーブルを設定
-/* BookクラスはPostgreSQLに作成したbooksinfoテーブルのデータを保持する役割を持つ*/
+@Table(name = "booksinfo")
 public class Book {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY) // idが自動生成される値であることを明示
-    @Column(name="id") //テーブルのどのカラムと対応しているかを設定
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="id")
     // 本のidを保持するフィールド
     private Integer id;
 	
