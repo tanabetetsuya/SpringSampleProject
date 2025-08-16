@@ -5,11 +5,11 @@
 <title>本を新規登録する</title>
 <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.2/css/bootstrap.min.css}"/>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 	<div th:replace="share::header"></div>
-    <div class="container">
+    <div class="container flex-grow-1">
         <h1>本を新規で登録する</h1>
-        <form th:action="@{/book-create}" th:object="${bookForm}" method="POST">
+        <form  th:action="@{/book-create}" th:object="${bookForm}" method="POST">
             <div class="mb-3">
                 <label for="bookTitle" class="form-label">タイトル</label>
                 <input id="bookTitle" class="form-control" type="text" th:field="*{title}">

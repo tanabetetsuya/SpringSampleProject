@@ -5,9 +5,9 @@
 <title>本の一覧表示</title>
 <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.2/css/bootstrap.min.css}"/>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 	<div th:replace="share::header"></div>
-	    <div class="container">
+	    <div class="container flex-grow-1">
 	        <div class="row">
 	            <div th:each="book : ${bookList}" th:object="${book}" class="card col-3 me-2" style="width: 18rem;">
 	                <div class="card-body">
